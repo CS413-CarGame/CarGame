@@ -409,7 +409,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.25240132, g: 0.14802419, b: 0.26415092, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -871,7 +871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1746839655123962832, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1746839655123962832, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -907,7 +907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2818653206584964377, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
       propertyPath: maxMotorTorque
-      value: 1500
+      value: 4500
       objectReference: {fileID: 0}
     - target: {fileID: 2818653206584964377, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
       propertyPath: maxSteeringAngle
@@ -1016,6 +1016,10 @@ PrefabInstance:
     - target: {fileID: 6942518972590264428, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
       propertyPath: m_Mass
       value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942518972590264428, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
