@@ -16,7 +16,7 @@ public class Car : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-
+    
     private void FixedUpdate()
     {
         UnityEngine.Debug.Log(rb.velocity.magnitude);
