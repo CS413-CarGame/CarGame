@@ -34,7 +34,7 @@ public class Car : MonoBehaviour
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("_Scene_1");
+        SceneManager.LoadScene("MainMenu");
     }
 
     private void FixedUpdate()
