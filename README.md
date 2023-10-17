@@ -7,7 +7,7 @@ Welcome to the "Car Game" project for the CS413 Virtual Worlds class. This Unity
 - Caden Tedeschi 
 - Max Poole 
 - Alex Poole
-- Connor Mayon
+- Noah Gooby
 
 ## Project Overview
 
