@@ -28,6 +28,7 @@ public class Car : MonoBehaviour
     {
         if (CheckForDeath(HEALTH))
         {
+            ScoreManager.instance.SaveHighScore();
             LoadMainMenu();
         }
     }
