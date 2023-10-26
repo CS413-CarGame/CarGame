@@ -5,10 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class LoadGame : MonoBehaviour
 {
-    public void LoadMainGame()
+    public void LoadTutorial()
     {
         SceneManager.LoadScene("Demo");
         Time.timeScale = 0f;
+    }
+
+    public void LoadMain()
+    {
+        SceneManager.LoadScene("MainGame");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     public void StartTutorial()
