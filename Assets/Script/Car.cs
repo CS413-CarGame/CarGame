@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -40,7 +36,7 @@ public class Car : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UnityEngine.Debug.Log(rb.velocity.magnitude);
+        //UnityEngine.Debug.Log(rb.velocity.magnitude);
         TRUCKVEL = rb.velocity;
         Vector3 tPos = transform.position;
         POS = tPos;
