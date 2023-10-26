@@ -1025,6 +1025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51120fbd2dc499e4daef844e224be9bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPlayer: {fileID: 0}
 --- !u!1 &2402843298433891317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,6 +1944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51120fbd2dc499e4daef844e224be9bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioPlayer: {fileID: 0}
 --- !u!1 &6455319060423651362
 GameObject:
   m_ObjectHideFlags: 0
