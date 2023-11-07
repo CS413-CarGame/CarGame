@@ -14,19 +14,19 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.015
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 3.5
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 51b74d7bad397457d883c5940f7664d8, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.094288595, g: 0.1194504, b: 0.15523562, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -443,8 +443,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427611603}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09518358, y: 0.0000000042820645, z: -4.094412e-10, w: 0.99545974}
-  m_LocalPosition: {x: -1.4209251, y: 5.41, z: -8.876931}
+  m_LocalRotation: {x: 0.21591501, y: 0.000000014944794, z: -0.0000000033047565, w: 0.9764122}
+  m_LocalPosition: {x: -1.4209251, y: 7.72, z: -8.876931}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1275,11 +1275,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: -1.93, z: 0}
+  m_TrackedObjectOffset: {x: 0, y: -4.65, z: 0}
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 0
   m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0.5
+  m_HorizontalDamping: 0
   m_VerticalDamping: 0.5
   m_ScreenX: 0.5
   m_ScreenY: 0.5
@@ -2130,8 +2130,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854629235}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.09518358, y: 0.0000000042820645, z: -4.094412e-10, w: 0.99545974}
-  m_LocalPosition: {x: -1.4209251, y: 5.41, z: -8.876931}
+  m_LocalRotation: {x: 0.21591501, y: 0.000000014944794, z: -0.0000000033047565, w: 0.9764122}
+  m_LocalPosition: {x: -1.4209251, y: 7.72, z: -8.876931}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2194,6 +2194,10 @@ PrefabInstance:
     - target: {fileID: 3519667179540561152, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
       propertyPath: m_Name
       value: Truck
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859931872083181686, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.22
       objectReference: {fileID: 0}
     - target: {fileID: 8446469071924036124, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
       propertyPath: healthBar
