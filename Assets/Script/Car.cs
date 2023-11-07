@@ -58,7 +58,6 @@ public class Car : MonoBehaviour
                 TakeDamage(WallDamageMult);
             }
         }
-
     }
 
     bool CheckForDeath(int health)
