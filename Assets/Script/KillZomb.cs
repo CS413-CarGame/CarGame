@@ -5,6 +5,7 @@ using UnityEngine;
 public class KillZomb : MonoBehaviour
 {
     public AudioSource audioPlayer;
+    public ParticleSystem deathEffect;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -12,6 +13,8 @@ public class KillZomb : MonoBehaviour
         {
             if(Car.TRUCKVEL.magnitude >= 4.5)
             {
+                Instantiate(deathEffect, transform.position, Quaternion.identity);
+
                 Destroy(other.gameObject);
 
                 ScoreManager.instance.AddScore(100);

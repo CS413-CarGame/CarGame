@@ -443,7 +443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427611603}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.215915, y: -0.00000002085761, z: 0.0000000046122635, w: 0.9764122}
+  m_LocalRotation: {x: 0.21591501, y: 0.000000014944794, z: -0.0000000033047565, w: 0.9764122}
   m_LocalPosition: {x: -1.4209251, y: 7.72, z: -8.876931}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2205,7 +2205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854629235}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.215915, y: -0.00000002085761, z: 0.0000000046122635, w: 0.9764122}
+  m_LocalRotation: {x: 0.21591501, y: 0.000000014944794, z: -0.0000000033047565, w: 0.9764122}
   m_LocalPosition: {x: -1.4209251, y: 7.72, z: -8.876931}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2270,10 +2270,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Truck
       objectReference: {fileID: 0}
+    - target: {fileID: 4106242353660697359, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 3199209493608695645, guid: 9e9a25318b5a9894b863261b59d4d1f3, type: 3}
     - target: {fileID: 6859931872083181686, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
       propertyPath: m_LocalPosition.y
       value: 6.22
       objectReference: {fileID: 0}
+    - target: {fileID: 7911111221266275816, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 3199209493608695645, guid: 9e9a25318b5a9894b863261b59d4d1f3, type: 3}
     - target: {fileID: 8446469071924036124, guid: d2cd503c789dc4a4aa533e86c7decbdc, type: 3}
       propertyPath: healthBar
       value: 
