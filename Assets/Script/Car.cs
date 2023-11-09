@@ -10,6 +10,8 @@ public class Car : MonoBehaviour
     public HealthBar healthBar;
     public int ZombDamage = 7;
     public int WallDamageMult = 10;
+    //public int TntDamage = 30;
+    public int HealthAdd = -50;
     public int HEALTH;
     public int maxHealth = 100;
 
@@ -58,6 +60,24 @@ public class Car : MonoBehaviour
                 TakeDamage(WallDamageMult);
             }
         }
+        if (other.gameObject.CompareTag("TNT"))
+        {
+            TakeDamage(30);
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.CompareTag("HealthBoost"))
+        {
+            if((HEALTH - -20) > 100)
+            {
+                TakeDamage(HEALTH - 100);
+            }
+            else
+            {
+                TakeDamage(-20);
+            }
+            Destroy(other.gameObject);
+        }
     }
 
     bool CheckForDeath(int health)
@@ -72,6 +92,7 @@ public class Car : MonoBehaviour
     void TakeDamage(int damage)
     {
         HEALTH -= damage;
+        Debug.Log(HEALTH);
         healthBar.SetHealth(HEALTH);
     }
 }
