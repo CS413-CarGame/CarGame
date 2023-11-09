@@ -3,7 +3,7 @@ using UnityEngine;
 public class Zomb : MonoBehaviour
 {
     [SerializeField] private GameObject car;
-    [SerializeField] private float speed = 1.5f;
+    [SerializeField] private float speed = 10f;
 
     public AudioSource audioPlayer;
     public AudioSource audioPlayer1;
