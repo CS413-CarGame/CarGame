@@ -53,6 +53,12 @@ public class Car : MonoBehaviour
                 TakeDamage(ZombDamage);
             }
         }
+
+        if (other.gameObject.CompareTag("bombZomb"))
+        {
+            TakeDamage(15);
+        }
+
         if (other.gameObject.CompareTag("Arena"))
         {
             if (TRUCKVEL.magnitude >= 3.5)

@@ -9,7 +9,7 @@ public class KillZomb : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Zomb"))
+        if (other.gameObject.CompareTag("Zomb") || other.gameObject.CompareTag("bombZomb"))
         {
             if(Car.TRUCKVEL.magnitude >= 4.5)
             {
