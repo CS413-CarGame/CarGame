@@ -30,13 +30,13 @@ public class Spawner : MonoBehaviour
 
     void SpawnBomb()
     {
-        GameObject zomb = Instantiate(TntPrefab, new Vector3(Random.Range(-24, 24), 0.15f, Random.Range(-24, 24)), transform.rotation);
+        GameObject Tnt = Instantiate(TntPrefab, new Vector3(Random.Range(-24, 24), 2f, Random.Range(-24, 24)), transform.rotation);
         Invoke("SpawnBomb", Random.Range(minPowerSpawn, maxPowerSpawn));
     }
 
     void SpawnHealth()
     {
-        GameObject zomb = Instantiate(HealthPrefab, new Vector3(Random.Range(-24, 24), 0.15f, Random.Range(-24, 24)), transform.rotation);
+        GameObject HpBoost = Instantiate(HealthPrefab, new Vector3(Random.Range(-24, 24), 2f, Random.Range(-24, 24)), transform.rotation);
         Invoke("SpawnHealth", Random.Range(minPowerSpawn, maxPowerSpawn));
     }
 }
