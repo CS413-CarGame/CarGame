@@ -7,8 +7,11 @@ public class mainSpawner : MonoBehaviour
     public GameObject zombPrefab;
     public GameObject TntPrefab;
     public GameObject HealthPrefab;
+    public GameObject bombZombPrefab;
     private float minSpawnRate = 1f;
     private float maxSpawnRate = 5f;
+    private float minBomberSpawnRate = 7f;
+    private float maxBomberSpawnRate = 13f;
     private float minPowerSpawn = 15f;
     private float maxPowerSpawn = 30f;
 
@@ -18,12 +21,19 @@ public class mainSpawner : MonoBehaviour
         Invoke("SpawnZomb", Random.Range(minSpawnRate, maxSpawnRate));
         Invoke("SpawnBomb", Random.Range(minPowerSpawn, maxPowerSpawn));
         Invoke("SpawnHealth", Random.Range(minPowerSpawn, maxPowerSpawn));
+        Invoke("SpawnBombZomb", Random.Range(minPowerSpawn, maxPowerSpawn));
     }
 
     void SpawnZomb()
     {
         GameObject zomb = Instantiate(zombPrefab, new Vector3(Random.Range(-74, 74), 0.15f, Random.Range(-74, 74)), transform.rotation);
         Invoke("SpawnZomb", Random.Range(minSpawnRate, maxSpawnRate));
+    }
+
+    void SpawnBombZomb()
+    {
+        GameObject bombZomb = Instantiate(bombZombPrefab, new Vector3(Random.Range(-74, 74), 0.15f, Random.Range(-74, 74)), transform.rotation);
+        Invoke("SpawnBombZomb", Random.Range(minBomberSpawnRate, maxBomberSpawnRate));
     }
 
     void SpawnBomb()
