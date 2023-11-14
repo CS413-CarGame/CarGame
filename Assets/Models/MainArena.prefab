@@ -1416,6 +1416,7 @@ MonoBehaviour:
   zombPrefab: {fileID: 7325208857032553766, guid: e77c2764ac8583a4180e84e6b6ba1b74, type: 3}
   TntPrefab: {fileID: 8193153681865054450, guid: 962f50a21055b43fe8ce5c3491071dc8, type: 3}
   HealthPrefab: {fileID: 3149548729300961157, guid: 7014460712c124e60a7dc80968bef3e0, type: 3}
+  bombZombPrefab: {fileID: 7325208857032553766, guid: 2b39ffd728cb24c50a2128daa1288ba8, type: 3}
 --- !u!1 &3162418108096084543
 GameObject:
   m_ObjectHideFlags: 0
