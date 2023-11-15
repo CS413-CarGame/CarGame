@@ -443,7 +443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 427611603}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21591501, y: 0.000000014944794, z: -0.0000000033047565, w: 0.9764122}
+  m_LocalRotation: {x: 0.215915, y: -0.00000002085761, z: 0.0000000046122635, w: 0.9764122}
   m_LocalPosition: {x: -1.4209251, y: 7.72, z: -8.876931}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2205,7 +2205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854629235}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21591501, y: 0.000000014944794, z: -0.0000000033047565, w: 0.9764122}
+  m_LocalRotation: {x: 0.215915, y: -0.00000002085761, z: 0.0000000046122635, w: 0.9764122}
   m_LocalPosition: {x: -1.4209251, y: 7.72, z: -8.876931}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2422,6 +2422,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Arena
       objectReference: {fileID: 0}
+    - target: {fileID: 4951452751978711943, guid: 311045c8f91be9141a4b9e6be8be2d11, type: 3}
+      propertyPath: rampPrefab
+      value: 
+      objectReference: {fileID: 7213624519652364131, guid: 7f75ac01ad9b641bfb541810094d3102, type: 3}
+    - target: {fileID: 4951452751978711943, guid: 311045c8f91be9141a4b9e6be8be2d11, type: 3}
+      propertyPath: bombZombPrefab
+      value: 
+      objectReference: {fileID: 7325208857032553766, guid: 2b39ffd728cb24c50a2128daa1288ba8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

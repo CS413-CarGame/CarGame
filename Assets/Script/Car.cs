@@ -14,6 +14,7 @@ public class Car : MonoBehaviour
     public int HealthAdd = -50;
     public int HEALTH;
     public int maxHealth = 100;
+    //public RampBuild Ramp;
 
     void Start()
     {
@@ -82,8 +83,12 @@ public class Car : MonoBehaviour
             {
                 TakeDamage(-20);
             }
+            //Ramp.canSpawnRamp = true;
             Destroy(other.gameObject);
+            
         }
+
+
     }
 
     bool CheckForDeath(int health)
