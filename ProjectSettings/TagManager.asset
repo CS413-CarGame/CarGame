@@ -10,6 +10,7 @@ TagManager:
   - TNT
   - bombZomb
   - Ramp
+  - Car
   layers:
   - Default
   - TransparentFX

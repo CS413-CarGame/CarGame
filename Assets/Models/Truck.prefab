@@ -813,6 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPlayer: {fileID: 2306201983473646428}
+  deathEffect: {fileID: 3199209493608695645, guid: 9e9a25318b5a9894b863261b59d4d1f3, type: 3}
 --- !u!1 &1997817519149955319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1333,7 +1334,7 @@ GameObject:
   - component: {fileID: 13327079955856970}
   m_Layer: 0
   m_Name: Truck
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1375,6 +1376,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   ZombDamage: 7
   WallDamageMult: 10
+  HealthAdd: -50
   HEALTH: 0
   maxHealth: 100
 --- !u!54 &6942518972590264428
@@ -1862,6 +1864,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioPlayer: {fileID: 2306201983473646428}
+  deathEffect: {fileID: 3199209493608695645, guid: 9e9a25318b5a9894b863261b59d4d1f3, type: 3}
 --- !u!1 &5357299754995019698
 GameObject:
   m_ObjectHideFlags: 0

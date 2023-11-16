@@ -11,7 +11,7 @@ public class KillZomb : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Zomb") || other.gameObject.CompareTag("bombZomb"))
         {
-            if(Car.TRUCKVEL.magnitude >= 4.5)
+            if(Car.TRUCKVEL.magnitude >= 2.5)
             {
                 Instantiate(deathEffect, transform.position, Quaternion.identity);
 
