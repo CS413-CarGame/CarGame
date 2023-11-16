@@ -8,6 +8,7 @@ public class mainSpawner : MonoBehaviour
     public GameObject TntPrefab;
     public GameObject HealthPrefab;
     public GameObject bombZombPrefab;
+
     private float minSpawnRate = 1f;
     private float maxSpawnRate = 5f;
     private float minBomberSpawnRate = 7f;
@@ -22,6 +23,12 @@ public class mainSpawner : MonoBehaviour
         Invoke("SpawnBomb", Random.Range(minPowerSpawn, maxPowerSpawn));
         Invoke("SpawnHealth", Random.Range(minPowerSpawn, maxPowerSpawn));
         Invoke("SpawnBombZomb", Random.Range(minPowerSpawn, maxPowerSpawn));
+        /*
+        if (Ramp.canSpawnRamp && Input.GetKeyDown("space"))
+        {
+            Invoke("SpawnRamp", Random.Range(minPowerSpawn, maxPowerSpawn));         
+        }
+        */
     }
 
     void SpawnZomb()
@@ -47,4 +54,17 @@ public class mainSpawner : MonoBehaviour
         GameObject HpBoost = Instantiate(HealthPrefab, new Vector3(Random.Range(-24, 24), 2f, Random.Range(-24, 24)), transform.rotation);
         Invoke("SpawnHealth", Random.Range(minPowerSpawn, maxPowerSpawn));
     }
+
+    /*
+    void SpawnRamp()
+    {
+        if( Ramp.canSpawnRamp && Input.GetKeyDown("space"))
+        {
+            GameObject ramp = Instantiate(HealthPrefab, new Vector3(Random.Range(-24, 24), 2f, Random.Range(-24, 24)), transform.rotation);
+            Invoke("SpawnRamp", Random.Range(minPowerSpawn, maxPowerSpawn));
+            Ramp.canSpawnRamp = false;
+        }
+
+    }
+    */
 }
