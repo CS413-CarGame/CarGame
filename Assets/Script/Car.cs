@@ -16,6 +16,10 @@ public class Car : MonoBehaviour
     public int maxHealth = 100;
     //public RampBuild Ramp;
 
+    // zomb cooldown
+    private bool canTakeZombDamage = true;
+    private float zombDamageCooldown = 0.5f;
+
     void Start()
     {
         HEALTH = maxHealth;
@@ -49,15 +53,17 @@ public class Car : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Zomb"))
         {
-            if (TRUCKVEL.magnitude <= 4.5)
+            if (canTakeZombDamage && TRUCKVEL.magnitude <= 4.5)
             {
                 TakeDamage(ZombDamage);
+                canTakeZombDamage = false;
+                Invoke("ResetZombDamageCooldown", zombDamageCooldown);
             }
         }
 
         if (other.gameObject.CompareTag("bombZomb"))
         {
-            TakeDamage(15);
+            TakeDamage(20);
         }
 
         if (other.gameObject.CompareTag("Arena"))
@@ -99,6 +105,12 @@ public class Car : MonoBehaviour
         }
         return false;
     }
+
+    void ResetZombDamageCooldown()
+    {
+        canTakeZombDamage = true;
+    }
+
 
     void TakeDamage(int damage)
     {
