@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PauseManager : MonoBehaviour
 {
@@ -28,6 +29,7 @@ public class PauseManager : MonoBehaviour
 
    public void Resume()
    {
+      Debug.Log("RESUME");
       pauseMenuUI.SetActive(false);
       Time.timeScale = 1f;
       isPaused = false;
@@ -35,6 +37,7 @@ public class PauseManager : MonoBehaviour
 
    void Pause()
    {
+      Debug.Log("PAUSED");
       pauseMenuUI.SetActive(true);
       Time.timeScale = 0f;
       isPaused = true;

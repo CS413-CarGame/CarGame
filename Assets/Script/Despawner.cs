@@ -21,5 +21,10 @@ public class Despawner : MonoBehaviour
             Destroy(other.gameObject);
             mainSpawner.canSpawnHealth = true;
         }
+        if (other.gameObject.CompareTag("bombZomb"))
+        {
+            Destroy(other.gameObject);
+            mainSpawner.canSpawnBombZomb = true;
+        }
     }
 }
