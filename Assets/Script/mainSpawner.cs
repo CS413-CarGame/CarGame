@@ -19,6 +19,7 @@ public class mainSpawner : MonoBehaviour
     public static bool canSpawnZomb = false;
     public static bool canSpawnHealth = false;
     public static bool canSpawnBomb = false;
+    public static bool canSpawnBombZomb = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,21 +36,26 @@ public class mainSpawner : MonoBehaviour
         */
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (canSpawnZomb)
         {
-            Invoke("SpawnZomb", 0);
+            GameObject zomb = Instantiate(zombPrefab, new Vector3(Random.Range(-74, 74), 0.15f, Random.Range(-74, 74)), transform.rotation);
             canSpawnZomb = false;
+        }
+        if (canSpawnBombZomb)
+        {
+            GameObject bombZomb = Instantiate(bombZombPrefab, new Vector3(Random.Range(-74, 74), 0.15f, Random.Range(-74, 74)), transform.rotation);
+            canSpawnBombZomb = false;
         }
         if (canSpawnHealth)
         {
-            Invoke("SpawnBomb", 0);
+            GameObject Tnt = Instantiate(TntPrefab, new Vector3(Random.Range(-24, 24), 2f, Random.Range(-24, 24)), transform.rotation);
             canSpawnHealth = false;
         }
         if (canSpawnBomb)
         {
-            Invoke("SpawnHealth", 0);
+            GameObject HpBoost = Instantiate(HealthPrefab, new Vector3(Random.Range(-24, 24), 2f, Random.Range(-24, 24)), transform.rotation);
             canSpawnBomb = false;
         }
     }
