@@ -1414,7 +1414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombPrefab: {fileID: 7325208857032553766, guid: e77c2764ac8583a4180e84e6b6ba1b74, type: 3}
-  TntPrefab: {fileID: 7160272837935899635, guid: 0fd590dc7faaea64eb69b1f66634b71e, type: 3}
+  TntPrefab: {fileID: 8193153681865054450, guid: 962f50a21055b43fe8ce5c3491071dc8, type: 3}
   HealthPrefab: {fileID: 624584167573899228, guid: d532d46af321c544ca747acbaeb47c7a, type: 3}
   bombZombPrefab: {fileID: 7325208857032553766, guid: 2b39ffd728cb24c50a2128daa1288ba8, type: 3}
 --- !u!1 &3162418108096084543
