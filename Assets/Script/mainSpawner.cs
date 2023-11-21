@@ -10,11 +10,15 @@ public class mainSpawner : MonoBehaviour
     public GameObject bombZombPrefab;
 
     private float minSpawnRate = 1f;
-    private float maxSpawnRate = 5f;
+    private float maxSpawnRate = 3f;
     private float minBomberSpawnRate = 7f;
     private float maxBomberSpawnRate = 13f;
     private float minPowerSpawn = 15f;
     private float maxPowerSpawn = 30f;
+
+    public static bool canSpawnZomb = false;
+    public static bool canSpawnHealth = false;
+    public static bool canSpawnBomb = false;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +33,25 @@ public class mainSpawner : MonoBehaviour
             Invoke("SpawnRamp", Random.Range(minPowerSpawn, maxPowerSpawn));         
         }
         */
+    }
+
+    private void Update()
+    {
+        if (canSpawnZomb)
+        {
+            Invoke("SpawnZomb", 0);
+            canSpawnZomb = false;
+        }
+        if (canSpawnHealth)
+        {
+            Invoke("SpawnZomb", 0);
+            canSpawnHealth = false;
+        }
+        if (canSpawnBomb)
+        {
+            Invoke("SpawnZomb", 0);
+            canSpawnBomb = false;
+        }
     }
 
     void SpawnZomb()
