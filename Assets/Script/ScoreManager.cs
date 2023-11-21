@@ -6,6 +6,8 @@ public class ScoreManager : MonoBehaviour
     private int score = 0;
     private int highScore = 0;
 
+    public static int scorePass = 0;
+
     public TextMeshProUGUI scoreText;
 
     public static ScoreManager instance;
@@ -33,6 +35,7 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int value)
     {
         score += value;
+        scorePass = score;
         scoreText.text = "Score: " + score;
 
         if (score > highScore)
