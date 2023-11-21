@@ -44,12 +44,12 @@ public class mainSpawner : MonoBehaviour
         }
         if (canSpawnHealth)
         {
-            Invoke("SpawnZomb", 0);
+            Invoke("SpawnBomb", 0);
             canSpawnHealth = false;
         }
         if (canSpawnBomb)
         {
-            Invoke("SpawnZomb", 0);
+            Invoke("SpawnHealth", 0);
             canSpawnBomb = false;
         }
     }
