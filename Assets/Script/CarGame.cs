@@ -12,9 +12,10 @@ public class CarGame : MonoBehaviour
     void Update()
     {
         Debug.Log(scoreText.text);
-        if (scoreText.text == "Score: 1000")
+        if (KillZomb.killedCount == 10)
         {
             SceneManager.LoadScene("MainMenu");
+            KillZomb.killedCount = 0;
         }
     }
 }

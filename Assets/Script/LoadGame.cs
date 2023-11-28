@@ -9,20 +9,24 @@ public class LoadGame : MonoBehaviour
     {
         SceneManager.LoadScene("Demo");
         Time.timeScale = 0f;
+        KillZomb.killedCount = 0;
     }
 
     public void LoadMain()
     {
         SceneManager.LoadScene("MainGame");
+        KillZomb.killedCount = 0;
     }
 
     public void QuitGame()
     {
         Application.Quit();
+        KillZomb.killedCount = 0;
     }
 
     public void StartTutorial()
     {
         Time.timeScale = 1f;
+        KillZomb.killedCount = 0;
     }
 }
