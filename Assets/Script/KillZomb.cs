@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KillZomb : MonoBehaviour
 {
+    static public int killedCount = 0;
     public AudioSource audioPlayer;
     public ParticleSystem deathEffect;
 
@@ -20,6 +21,9 @@ public class KillZomb : MonoBehaviour
                 ScoreManager.instance.AddScore(100);
 
                 audioPlayer.Play();
+
+                killedCount++;
+                Debug.Log(killedCount.ToString());
             }
         }
     }
