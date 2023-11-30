@@ -55,7 +55,7 @@ public class Car : MonoBehaviour
         {
             if (canTakeZombDamage && TRUCKVEL.magnitude <= 4.5)
             {
-                TakeDamage(ZombDamage * (1 + KillZomb.killedCount % 10));
+                TakeDamage(ZombDamage * (1 + KillZomb.killedCount / 10));
                 canTakeZombDamage = false;
                 Invoke("ResetZombDamageCooldown", zombDamageCooldown);
             }
