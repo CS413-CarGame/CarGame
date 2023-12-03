@@ -2,16 +2,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+// Pause Menu Manager
+
 public class PauseManager : MonoBehaviour
 {
    public GameObject pauseMenuUI;
    private bool isPaused = false;
 
+   // Make sure menu doesn't popup
    void Awake()
    {
       pauseMenuUI.SetActive(false);
    }
    
+   // Check if escape key is pressed and pause game if it is
    void Update()
    {
       if (Input.GetKeyDown(KeyCode.Escape))
@@ -27,6 +31,7 @@ public class PauseManager : MonoBehaviour
       }
    }
 
+   // Resume Game
    public void Resume()
    {
       Debug.Log("RESUME");
@@ -35,6 +40,7 @@ public class PauseManager : MonoBehaviour
       isPaused = false;
    }
 
+   // pause game
    void Pause()
    {
       Debug.Log("PAUSED");
@@ -43,6 +49,7 @@ public class PauseManager : MonoBehaviour
       isPaused = true;
    }
 
+   // Load main menu
    public void LoadMenu()
    {
       Time.timeScale = 1f;

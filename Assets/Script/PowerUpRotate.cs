@@ -1,6 +1,8 @@
 ﻿using System;
 using UnityEngine;
 
+// Rotate and Bob powerups
+
 public class PowerUpRotate : MonoBehaviour
 {
     public float rotationsPerSecond = 0.1f;

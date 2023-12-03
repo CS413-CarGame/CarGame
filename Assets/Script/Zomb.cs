@@ -1,5 +1,7 @@
 using UnityEngine;
 
+// Zombie Managers
+
 public class Zomb : MonoBehaviour
 {
     [SerializeField] private GameObject car;
@@ -38,12 +40,14 @@ public class Zomb : MonoBehaviour
         }
     }
 
+    // Move Zombie towards Car
     private void MoveTowardsCenter()
     {
         transform.position = Vector3.MoveTowards(transform.position, Car.POS, speed * Time.deltaTime);
         transform.forward = Car.POS - transform.position;
     }
 
+    // Collision Detections
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Car"))
@@ -52,6 +56,7 @@ public class Zomb : MonoBehaviour
         }
     }
 
+    //
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("Car"))

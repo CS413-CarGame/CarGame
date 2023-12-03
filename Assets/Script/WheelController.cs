@@ -4,6 +4,8 @@ using System.Data;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
+// Car Movement Controller
+
 public class WheelController : MonoBehaviour
 {
     public float acceleration = 1000;
@@ -25,6 +27,7 @@ public class WheelController : MonoBehaviour
         UpdateWheels();
     }
 
+    // Motor Controls
     public void HandleMotor()
     {
         _currentAcceleration = acceleration * Input.GetAxis("Vertical");
@@ -36,6 +39,7 @@ public class WheelController : MonoBehaviour
         ApplyBrakes();
     }
 
+    // Steering Control
     public void HandleSteering()
     {
         _currentTurnAngle = turnAngle * Input.GetAxis("Horizontal");
@@ -44,6 +48,7 @@ public class WheelController : MonoBehaviour
         frontRight.steerAngle = _currentTurnAngle;
     }
 
+    // Brake Controls
     public void ApplyBrakes()
     {
         if (Input.GetKey(KeyCode.Space))
@@ -61,6 +66,7 @@ public class WheelController : MonoBehaviour
         rearRight.brakeTorque = _currentBreakForce;
     }
 
+    // Update Visual Wheel positions
     public void UpdateWheels()
     {
         UpdateWheelPos(frontLeft, frontLeftT);
@@ -69,6 +75,7 @@ public class WheelController : MonoBehaviour
         UpdateWheelPos(rearLeft, rearLeftT);
     }
 
+    // Update visual wheel positions
     public void UpdateWheelPos(WheelCollider col, Transform trans)
     {
         Vector3 pos;

@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Entity despawner
+
 public class Despawner : MonoBehaviour
 {
+    // Destroy and respawn entity if spawn within despawn zone
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Zomb"))

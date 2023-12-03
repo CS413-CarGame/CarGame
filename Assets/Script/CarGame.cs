@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Check for tutorial ending condition
+
 public class CarGame : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
