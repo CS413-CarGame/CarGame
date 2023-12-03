@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// SpeedometerManager
+
 public class Speedometer : MonoBehaviour {
 
     private const float MAX_SPEED_ANGLE = -20;

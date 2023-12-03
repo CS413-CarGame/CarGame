@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Play main menu music
+
 public class MainMenuMusic : MonoBehaviour
 {
 

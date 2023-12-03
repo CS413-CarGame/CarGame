@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Scene Loading Manager
+// Reset kill count on scene change
+
 public class LoadGame : MonoBehaviour
 {
     public void LoadTutorial()

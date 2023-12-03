@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Car Collision effects
+
 public class Car : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ public class Car : MonoBehaviour
     private bool canTakeZombDamage = true;
     private float zombDamageCooldown = 0.5f;
 
+    // Set Values at start
     void Start()
     {
         HEALTH = maxHealth;
@@ -27,6 +30,7 @@ public class Car : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    // Check for player death every frame
     void Update()
     {
         if (CheckForDeath(HEALTH))
@@ -36,11 +40,13 @@ public class Car : MonoBehaviour
         }
     }
 
+    // Load main menu
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
+    // Get the truck velocity and position at a fixed rate
     private void FixedUpdate()
     {
         //UnityEngine.Debug.Log(rb.velocity.magnitude);
@@ -49,8 +55,10 @@ public class Car : MonoBehaviour
         POS = tPos;
     }
 
+    // Collision Detection for car damage
     private void OnTriggerEnter(Collider other)
     {
+        // Take car damage from zombie if traveling slower than a certain speed
         if (other.gameObject.CompareTag("Zomb"))
         {
             if (canTakeZombDamage && TRUCKVEL.magnitude <= 4.5)
@@ -61,11 +69,13 @@ public class Car : MonoBehaviour
             }
         }
 
+        // Take car damage when hitting a bomb zombie
         if (other.gameObject.CompareTag("bombZomb"))
         {
             TakeDamage(20);
         }
 
+        // Take car damage when hitting a wall
         if (other.gameObject.CompareTag("Arena"))
         {
             if (TRUCKVEL.magnitude >= 3.5)
@@ -73,12 +83,15 @@ public class Car : MonoBehaviour
                 TakeDamage(WallDamageMult);
             }
         }
+
+        // Take car damage when hitting TNT powerup
         if (other.gameObject.CompareTag("TNT"))
         {
             TakeDamage(30);
             Destroy(other.gameObject);
         }
 
+        // Heal car when hitting health boost powerup
         if (other.gameObject.CompareTag("HealthBoost"))
         {
             if((HEALTH - -20) > 100)
@@ -97,6 +110,7 @@ public class Car : MonoBehaviour
 
     }
 
+    // Check for player death
     bool CheckForDeath(int health)
     {
         if (health <= 0)
@@ -111,7 +125,7 @@ public class Car : MonoBehaviour
         canTakeZombDamage = true;
     }
 
-
+    // Take car damage
     void TakeDamage(int damage)
     {
         HEALTH -= damage;

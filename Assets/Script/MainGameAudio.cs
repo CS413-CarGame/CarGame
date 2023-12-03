@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Play main game audio
+
 public class MainGameAudio : MonoBehaviour
 {
 

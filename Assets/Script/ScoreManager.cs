@@ -1,6 +1,8 @@
 using UnityEngine;
 using TMPro;
 
+// Score Manager
+
 public class ScoreManager : MonoBehaviour
 {
     private int score = 0;
@@ -32,6 +34,7 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
+    // Increase Score
     public void AddScore(int value)
     {
         score += value;
@@ -46,6 +49,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    // Save score
     public void SaveHighScore()
     {
          PlayerPrefs.SetInt("HighScore", highScore);

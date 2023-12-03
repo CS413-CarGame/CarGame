@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Spawn Manager
+
 public class mainSpawner : MonoBehaviour
 {
     public GameObject zombPrefab;
@@ -21,6 +23,7 @@ public class mainSpawner : MonoBehaviour
     public static bool canSpawnBomb = false;
     public static bool canSpawnBombZomb = false;
 
+    // Start spawning of zombies and powerups
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +39,7 @@ public class mainSpawner : MonoBehaviour
         */
     }
 
+    // check if entites can spawn and spawn accordingly
     private void FixedUpdate()
     {
         if (canSpawnZomb)
@@ -60,24 +64,28 @@ public class mainSpawner : MonoBehaviour
         }
     }
 
+    // Recursively spawn zombies
     void SpawnZomb()
     {
         GameObject zomb = Instantiate(zombPrefab, new Vector3(Random.Range(-74, 74), 0.15f, Random.Range(-74, 74)), transform.rotation);
         Invoke("SpawnZomb", Random.Range(minSpawnRate, maxSpawnRate));
     }
 
+    // recursively spawn bomb zombies
     void SpawnBombZomb()
     {
         GameObject bombZomb = Instantiate(bombZombPrefab, new Vector3(Random.Range(-74, 74), 0.15f, Random.Range(-74, 74)), transform.rotation);
         Invoke("SpawnBombZomb", Random.Range(minBomberSpawnRate, maxBomberSpawnRate));
     }
 
+    // recursively spawn bombs
     void SpawnBomb()
     {
         GameObject Tnt = Instantiate(TntPrefab, new Vector3(Random.Range(-24, 24), 2f, Random.Range(-24, 24)), transform.rotation);
         Invoke("SpawnBomb", Random.Range(minPowerSpawn, maxPowerSpawn));
     }
 
+    // Recursively spawn Health
     void SpawnHealth()
     {
         GameObject HpBoost = Instantiate(HealthPrefab, new Vector3(Random.Range(-24, 24), 2f, Random.Range(-24, 24)), transform.rotation);
