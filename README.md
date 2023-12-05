@@ -36,7 +36,7 @@ To play the game, follow these steps:
 - Have fun and try to achieve the highest score!
 
 ## Demo Video
-https://github.com/APoole11/CarGame.git
+https://youtu.be/jf9KEpWoj-Q
 
 ## Troubleshooting
 If you encounter any issues while running the game or have suggestions for improvement, please feel free to [create an issue](https://github.com/yourusername/car-game/issues) in this repository. We value your feedback and will do our best to address any problems.
